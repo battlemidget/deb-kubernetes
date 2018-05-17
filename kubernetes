@@ -16,3 +16,24 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import argparse
+import sys
+
+try:
+    option = sys.argv[1]
+except IndexError:
+    print("Unknown argument, please use `help` or `install`.")
+    sys.exit(1)
+
+if option not in ['help', 'install']:
+    print(
+        "Unknown argument: {}, please use `help` or `install`".format(option))
+    sys.exit(1)
+
+if option == 'help':
+    print("This is the standard Ubuntu installer for Kubernetes that supports "
+          "your workstation, vmware, openstack, AWS, Azure, Google, and Oracle "
+          "cloud. Deploy a K8s instance with `kubernetes install`")
+    sys.exit(0)
+else:
+    print("Fetching components..")
+    sys.exit(0)
