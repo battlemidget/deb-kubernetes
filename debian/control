@@ -8,7 +8,7 @@ Homepage: https://k8s.io
 
 Package: kubernetes
 Architecture: all
-Depends: python3, ${misc:Depends}
+Depends: ${misc:Depends}
 Description: Installer package for Kubernetes
  Kubernetes is an open-source system for automating deployment, scaling, and
  management of containerized applications.
