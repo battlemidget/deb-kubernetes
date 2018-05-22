@@ -21,12 +21,17 @@ args=("$@")
 usage() {
     echo "This is the standard Ubuntu installer for Kubernetes that supports your "
     echo "workstation, VMware, Openstack, AWS, Azure, Google, and Oracle cloud. "
+    echo ""
     echo "Deploy a K8s instance with 'kubernetes install'"
 }
 
 case ${args[0]} in
-    help)
+    *help)
         usage
+        exit 0
+        ;;
+    *version)
+        echo "1.0.0"
         exit 0
         ;;
     install)
@@ -37,13 +42,13 @@ case ${args[0]} in
             case $opt in
                 "microk8s")
                     echo "Fetching components..."
-                    echo "sudo snap install microk8s --beta --classic"
+                    sudo snap install microk8s --beta --classic
                     break
                     ;;
                 "Canonical Distribution of Kubernetes")
                     echo "Fetching components..."
-                    echo "sudo snap install conjure-up --classic"
-                    echo "conjure-up canonical-kubernetes"
+                    sudo snap install conjure-up --classic
+                    conjure-up canonical-kubernetes
                     break
                     ;;
                 "Quit")

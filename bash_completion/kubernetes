@@ -1,0 +1,7 @@
+#-*- mode: shell-script;-*-
+
+_k8s() {
+    COMPREPLY=($(compgen -W "help install" "${COMP_WORDS[1]}"))
+}
+
+complete -F _k8s kubernetes

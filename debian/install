@@ -1,1 +1,2 @@
 kubernetes usr/bin
+bash_completion/kubernetes usr/share/bash-completion/completions
