@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+if $(snap list|grep -q 'microk8s'); then
+    echo "The kubernetes package has been removed, however, microk8s"
+    echo "is still installed and running on the system."
+    echo ""
+    echo "Please run 'sudo snap remove microk8s' to complete the "
+    echo "uninstallation."
+    echo ""
+fi
+
+#DEBHELPER#
