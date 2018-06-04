@@ -6,8 +6,7 @@ if $(snap list|grep -q 'microk8s'); then
     echo "The kubernetes package has been removed, however, microk8s"
     echo "is still installed and running on the system."
     echo ""
-    echo "Please run 'sudo snap remove microk8s' to complete the "
-    echo "uninstallation."
+    echo "If you microk8s cluster is no longer needed, please run 'sudo snap remove microk8s'"
     echo ""
 fi
 
@@ -17,13 +16,12 @@ if $(snap list|grep -q 'conjure-up'); then
     if $(juju models|grep -q 'conjure'); then
         echo ""
         echo "Additionally, conjure-up still has deployed juju controllers and models."
-        echo "To clean those up, run 'juju destroy-model <model-name>' and"
-        echo "'juju destroy-controller <controller-name>', then proceed to removing the"
-        echo "conjure-up snap as shown below."
+        echo "If those are no longer needed, clean them up by running 'juju destroy-model <model-name>' and"
+        echo "'juju destroy-controller <controller-name>'."
     fi
     echo ""
-    echo "Please run 'sudo snap remove conjure-up' to complete the "
-    echo "uninstallation."
+    echo "If you no longer wish to use conjure-up to create new kubernetes "
+    echo "deployments, please run 'sudo snap remove conjure-up'"
     echo ""
 fi
 
