@@ -48,7 +48,8 @@ case ${args[0]} in
                     ;;
                 "microk8s")
                     echo "Fetching components..."
-                    sudo snap install microk8s --beta --classic
+                    sudo snap install conjure-up --classic
+                    conjure-up microk8s
                     break
                     ;;
                 "Quit")
