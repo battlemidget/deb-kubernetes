@@ -64,8 +64,7 @@ case ${args[0]} in
         exit 0
         ;;
     *)
-        echo "Unknown arguments: ${args[@]}"
-        usage
+        echo "Missing arguments: <install|help>"
         exit 1
         ;;
 esac
