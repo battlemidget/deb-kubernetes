@@ -6,17 +6,19 @@ if [ "$1" != "remove" ]; then
     exit 0
 fi
 
+echo "The kubernetes package has been removed."
+
 if $(snap list|grep -q 'microk8s') >/dev/null; then
-    echo "The kubernetes package has been removed, however, microk8s"
-    echo "is still installed and running on the system."
+    echo ""
+    echo "Note: microk8s is still installed and running on the system."
     echo ""
     echo "If the microk8s cluster is no longer needed, please run 'sudo snap remove microk8s'"
     echo ""
 fi
 
 if $(snap list|grep -q 'conjure-up') >/dev/null; then
-    echo "The kubernetes package has been removed, however, conjure-up"
-    echo "is still installed on the system."
+    echo ""
+    echo "Note: conjure-up is still installed on the system."
     if $(juju controllers >/dev/null 2>&1) && $(juju models|grep -q 'conjure'); then
         echo ""
         echo "Additionally, conjure-up has deployed juju controllers and models."
