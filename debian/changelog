@@ -1,5 +1,8 @@
-kubernetes (1.0) unstable; urgency=medium
+kubernetes (1.0) cosmic; urgency=medium
 
-  * Initial Release.
+  * Initial Packaging Release. This provides a simple shell script
+    that allows the user to choose a target kubernetes installation
+    between Canonidal Distrubtion of Kubernetes or the more developer
+    focused microk8s.
 
  -- Adam Stokes <adam.stokes@ubuntu.com>  Thu, 17 May 2018 09:31:00 -0400
