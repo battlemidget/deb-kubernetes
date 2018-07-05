@@ -1,8 +1,5 @@
 kubernetes (1.0) cosmic; urgency=medium
 
-  * Initial Packaging Release. This provides a simple shell script
-    that allows the user to choose a target kubernetes installation
-    between Canonidal Distrubtion of Kubernetes or the more developer
-    focused microk8s.
+  * Initial Packaging Release. (LP: #1780334)
 
  -- Adam Stokes <adam.stokes@ubuntu.com>  Thu, 17 May 2018 09:31:00 -0400
