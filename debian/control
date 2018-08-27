@@ -2,8 +2,8 @@ Source: kubernetes
 Section: misc
 Priority: optional
 Maintainer: Adam Stokes <adam.stokes@ubuntu.com>
-Build-Depends: debhelper (>=9)
-Standards-Version: 3.9.7
+Build-Depends: debhelper (>=11)
+Standards-Version: 4.1.4
 Homepage: https://k8s.io
 
 Package: kubernetes

@@ -1,3 +1,4 @@
 debian/kubernetes*
 debian/files
 debian/debhelper*
+debian/.debhelper*
